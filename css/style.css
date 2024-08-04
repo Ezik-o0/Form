@@ -1,0 +1,40 @@
+html {
+    font-size: 1px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14rem;
+    background: #fff;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper{
+    margin: auto;
+    width: 82%;
+    max-width: 1200px
+}
+
+.wrapper-title{
+    margin: 0;
+    padding: 70px 0;
+    color: #1f222c;
+    font-size: 30px;
+    text-align: center;
+}
+
+.simple-form__title,
+.fixed-form__title,
+.elements__title,
+.stylized-checkbox__title,
+.form-table__title,
+.forms-table__title{
+    color: #b3b3b3;
+    font-size: 20px;
+    text-transform: uppercase;
+}
