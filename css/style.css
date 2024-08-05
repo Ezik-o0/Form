@@ -280,6 +280,13 @@ hr{
     height: 16px;
 }
 
+.form-table input,
+.form-table select,
+.form-table textarea,
+.form-table label[for="photoo"]{
+    margin: 4px 50px;
+}
+
 .table{
     display: flex;
     margin: 5px 0;
