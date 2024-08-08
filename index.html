@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Веб-форми</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="wrapper">
@@ -67,15 +70,15 @@
                     <div class="elements flex">
                         <div class="radio">
                             <p>
-                                <input type="radio" name="nova-poshta" id="nova-poshta">
+                                <input type="radio" name="department" id="nova-poshta">
                                 <label for="nova-poshta">Нова Пошта</label>
                             </p>
                             <p>
-                                <input type="radio" name="courier" id="courier">
+                                <input type="radio" name="department" id="courier">
                                 <label for="courier">Кур’єр</label>
                             </p>
                             <p>
-                                <input type="radio" name="pickup" id="pickup" disabled>
+                                <input type="radio" name="department" id="pickup" disabled>
                                 <label for="pickup">Самовивіз</label>
                             </p>
                         </div>
@@ -118,18 +121,18 @@
         <div class="stylized-checkbox">
             <h2 class="stylized-checkbox__title">03. стилізовані чекбокси </h2>
             <form action="" method="post">
-                <div class="flex">
-                    <div class="stylized-radio">
+                <div class="stylized">
+                    <div class="stylized__radio">
                         <p>
-                            <input type="radio" name="man" id="man">
+                            <input type="radio" name="gender" id="man">
                             <label for="man">Чоловік</label>
                         </p>
                         <p>
-                            <input type="radio" name="woman" id="woman">
+                            <input type="radio" name="gender" id="woman">
                             <label for="woman">Жінка</label>
                         </p>
                     </div>
-                    <div class="stylized-checkbox">
+                    <div class="stylized__checkbox">
                         <p>
                             <input type="checkbox" name="" id="news-receive">
                             <label for="news-receive">Отримувати новини</label>
@@ -188,11 +191,11 @@
                             </td>
                             <td class="table">
                                 <p>
-                                    <input type="radio" name="build-man" id="build-man">
-                                    <label for="build-man">Чоловік</label>
+                                    <input type="radio" name="human" id="build-man">
+                                    <label for="gender">Чоловік</label>
                                 </p>
                                 <p>
-                                    <input type="radio" name="build-woman" id="build-woman">
+                                    <input type="radio" name="human" id="build-woman">
                                     <label for="build-woman">Жінка</label>
                                 </p>
                             </td>
@@ -212,6 +215,12 @@
                             </td>
                             <td>
                                 <textarea name="comment" id="comment" placeholder="Введіть текст повідомлення"></textarea> <br>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
                                 <input type="submit" value="Зареєструватися">
                             </td>
                         </tr>
@@ -222,11 +231,11 @@
         <hr>
         <div class="forms-table">
             <h2 class="forms-table__title">05. форма таблицею</h2>
-            <form action="">
+            <form action="" method="post">
                 <h3>Оформлення заявки</h3>
                 <table>
                     <tbody>
-                        <tr>
+                        <tr class="infa__name">
                             <td>
                                 <input type="text" id="surname" placeholder="Василь Вірастюк">
                                 <label for="surname">Прізвище та ім’я</label>
@@ -240,7 +249,7 @@
                                 <label for="phone">Телефон</label>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="infa">
                             <td>
                                 <label for="country">Країна</label>
                                 <select name="country" id="country">
@@ -250,33 +259,34 @@
                                     <option value="Turkey">Турція</option>
                                 </select>
                             </td>
-                            <td>
-                                <input type="email" name="adres" id="adres">
+                            <td colspan="2">
+                                <input type="email__adres" name="adres" id="adres">
                                 <label for="adres">Адреса</label>
                             </td>
-                            <td></td>
                         </tr>
-                        <tr>
+                        <tr class="infa">
                             <td>
-                                <input type="text" name="place" id="place">
+                                <input type="text__city" name="place" id="place">
                                 <label for="place">Місто</label>
                             </td>
                             <td>
-                                <input type="text" name="house" id="house">
+                                <input type="text__house" name="house" id="house">
                                 <label for="house">Будинок</label>
                             </td>
                             <td>
-                                <input type="text" name="index" id="index">
+                                <input type="text__index" name="index" id="index">
                                 <label for="index">Поштовий індекс</label>
+                            </td>
+                        </tr>
+                        <tr class="checkbox__box">
+                            <td colspan="3">
+                                <input type="checkbox" name="agree" id="agree">
+                                <label for="agree">Я погоджуюсь з правилами оплати та доставки товару</label>
                             </td>
                         </tr>
                     </tbody>
                 </table>
                 <div class="button">
-                    <p>
-                        <input type="checkbox" name="agree" id="agree">
-                        <label for="agree">Я погоджуюсь з правилами оплати та доставки товару</label>
-                    </p>
                     <p>
                         <input type="button" value="Повернутися назад">
                     </p>

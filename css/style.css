@@ -4,7 +4,7 @@ html {
 
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Roboto";
     font-size: 14rem;
     background: #fff;
 }
@@ -26,6 +26,7 @@ body {
     color: #1f222c;
     font-size: 30px;
     text-align: center;
+    font-weight: 700;
 }
 
 hr{
@@ -42,6 +43,7 @@ hr{
 .forms-table__title{
     color: #b3b3b3;
     font-size: 20px;
+    font-weight: 700;
     text-transform: uppercase;
 }
 
@@ -57,10 +59,11 @@ hr{
 .simple-form select,
 .simple-form textarea{
     width: 330px;
-    min-height: 41px;
-    border-radius: 3px;
+    box-sizing: border-box;
+    padding: 12px 15px;
     background-color: #fff;
     border: none;
+    border-radius: 3px;
     border: 1px solid #ccc;
     outline: none;
 }
@@ -78,12 +81,11 @@ hr{
 
 .simple-form select{
     margin-bottom: 9px;
-    padding: 0 15px;
-    width: 335px;
+    padding: 11px 15px;
+    width: 330px;
 }
 
 .simple-form ::placeholder{
-    padding-left: 17px;
     color: #b3b3b3;
     font-size: 14rem;
 }
@@ -108,11 +110,12 @@ hr{
 }
 
 .fixed-form{
+    position: fixed;
+    left: 69%;
     width: 315px;
 }
 
 .fixed{
-    position: fixed;
     border-radius: 5px;
     filter: drop-shadow(0px 5px 6px rgba(0,0,0,0.15));
     background-color: #fafafa;
@@ -131,7 +134,7 @@ hr{
 
 .fixed input{
     width: 260px;
-    height: 36px;
+    padding: 11px 0;
     border-radius: 3px;
     border: none;
     border: 1px solid #ccc;
@@ -167,7 +170,7 @@ hr{
 .fixed input[type="checkbox"]{
     margin: 0 9px;
     width: 16px;
-    height: 16px;
+    padding: 11px 0;
     border: none;
     border: 1px solid #ccc;
 }
@@ -199,7 +202,7 @@ hr{
 
 .radio p,
 .checkbox p{
-    margin: 16px 0;
+    margin: 8px 0;
 }
 
 .checkbox label[for="news"],
@@ -210,7 +213,7 @@ hr{
 
 .elements-box{
     padding: 20px;
-    width: 473px;
+    width: 480px;
     border-radius: 3px;
     background-color: #f7f7f7;
     border: 1px solid #e5e5e5;
@@ -237,6 +240,110 @@ hr{
     border: 1px solid #ccc;
 }
 
+.stylized__radio p{
+    margin: 10px 0;
+}
+
+.stylized__radio label[for="man"],
+.stylized__radio label[for="woman"]{
+    display: inline-block;
+    position: relative;
+    padding: 27px 0 27px 100px;
+    color: #1f222c;
+    font-size: 16rem;
+}
+
+.stylized__radio label[for="man"]::before{
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-image: url(../img/gender_sprite.png);
+    width: 71px;
+    height: 71px;
+}
+
+.stylized__radio label[for="woman"]::before{
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-image: url(../img/gender_sprite.png);
+    width: 71px;
+    height: 71px;
+    background-position: 72px 0;
+}
+
+.stylized__radio input:checked+label::before{
+    top: -1px;
+    background-position: 0 74px;
+}
+
+.stylized__radio input:checked+label[for="woman"]::before{
+    top: -1px;
+    background-position: 72px 71px;
+}
+
+.stylized__radio input[type="radio"]{
+    display: none;
+}
+
+.stylized{
+    display: flex;
+}
+
+.stylized__checkbox p{
+    margin: 32px 400px;
+}
+
+.stylized__checkbox label{
+    color: #1f222c;
+    font-size: 14rem;
+}
+
+.stylized__checkbox p{
+    position: relative;
+}
+
+.stylized__checkbox input[type="checkbox"]{
+    display: none;
+}
+
+.stylized__checkbox label[for="news-receive"]::before,
+.stylized__checkbox label[for="buy"]::before,
+.stylized__checkbox label[for="light"]::before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -60px;
+    width: 45px;
+    height: 25px;
+    border-radius: 12px;
+    background-color: #cfcfd1;
+}
+
+.stylized__checkbox label[for="news-receive"]::after,
+.stylized__checkbox label[for="buy"]::after,
+.stylized__checkbox label[for="light"]::after{
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -58px;
+    width: 21px;
+    height: 21px;
+    border-radius: 11px;
+    background-color: #fff;
+}
+
+.stylized__checkbox input:checked+label::before{
+    background-color: #3d69fe;
+
+}
+
+.stylized__checkbox input:checked+label::after{
+    left: -38px;
+}
+
 .form-table h3{
     color: #1f222c;
     font-size: 18rem;
@@ -248,10 +355,12 @@ hr{
 }
 
 .form-table input,
-.form-table select{
+.form-table select,
+.form-table textarea{
     margin: 4px 0;
     width: 340px;
-    height: 41px;
+    box-sizing: border-box;
+    padding: 12px 15px;
     border-radius: 3px;
     border: none;
     border: 1px solid #ccc;
@@ -260,14 +369,13 @@ hr{
 
 .form-table input::placeholder,
 .form-table textarea::placeholder{
-    padding: 17px;
     color: #b3b3b3;
     font-size: 14rem;
 }
 
 .form-table select{
     padding-left: 17px;
-    width: 345px;
+    width: 340px;
 }
 
 .form-table option{
@@ -280,20 +388,22 @@ hr{
     height: 16px;
 }
 
-.form-table input,
+.form-table input[type="text"],
+.form-table input[type="password"],
+.form-table input[type="submit"],
 .form-table select,
 .form-table textarea,
 .form-table label[for="photoo"]{
-    margin: 4px 50px;
+    margin: 4px 100px;
 }
 
 .table{
     display: flex;
-    margin: 5px 0;
+    margin: 5px 100px;
 }
 
 .table p{
-    margin: 0;
+    margin-bottom: 20px;
 }
 
 .table label{
@@ -306,11 +416,11 @@ hr{
 .form-table input[type="file"]{
     display: none;
     width: 170px;
-    height: 41px;
+    padding: 16px 0;
 }
 
 .form-table label[for="photoo"]{
-    padding: 15px 40px;
+    padding: 14px 40px;
     color: #fff;
     border: none;
     border-radius: 3px;
@@ -328,7 +438,7 @@ hr{
 }
 
 .form-table input[type="submit"]{
-    margin-top: 15px;
+    margin-top: 10px;
     width: 345px;
     color: #fff;
     border: none;
@@ -346,4 +456,135 @@ hr{
 .form-table input[type="submit"]:focus{
     filter: drop-shadow(0px 2px 2.5px rgba(8,118,52,0.35));
     background-color: #07be51
+}
+
+.forms-table h3{
+    color: #1f222c;
+    font-size: 18rem;
+}
+
+.infa__name{
+    position: relative;
+}
+
+.infa__name::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 680px;
+    border: 1px solid #e9e9e9;
+}
+
+.forms-table input,
+.forms-table select{
+    margin: 30px 9px 40px 0;
+    padding: 12px 15px;
+    width: 220px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+.forms-table select,
+.forms-table input[type="email__adres"],
+.forms-table input[type="text__city"],
+.forms-table input[type="text__house"],
+.forms-table input[type="text__index"]{
+    margin: 30px 9px 10px 0;
+}
+
+.forms-table input[type="email__adres"]{
+    width: 98%;
+}
+
+.forms-table td{
+    position: relative;
+}
+
+.infa label,
+.infa__name label{
+    padding: 18px 0;
+    position: absolute;
+    top: -18px;
+    left: 0;
+}
+
+.forms-table label{
+    color: #b3b3b3;
+    font-size: 13px;
+}
+
+.forms-table input:focus,
+.forms-table select:focus{
+    outline: none;
+    border: none;
+    border: 1px solid #3e6aff;
+    filter: drop-shadow(0 0 2.5px rgba(62,106,255,0.55));
+}
+
+.forms-table input[type="checkbox"]{
+    margin: 0 9px;
+    width: 16px;
+    height: 16px;
+}
+
+.checkbox__box{
+    position: relative;
+}
+
+.checkbox__box::after{
+    content: '';
+    left: 0;
+    top: 40px;
+    position: absolute;
+    width: 680px;
+    border: 1px solid #e9e9e9;
+}
+
+.forms-table label[for="agree"]{
+    color: #1f222c;
+    font-size: 14px;
+}
+
+.button{
+    display: flex;
+}
+
+.button p{
+    margin: 50px 0;
+    margin-right: 330px;
+}
+
+.forms-table input[type="button"]{
+    margin: 0;
+    padding: 12px;
+    width: 180px;
+    color: #6e6f77;
+    font-size: 14px;
+    border: none;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #85868d;
+}
+
+.forms-table input[type="button"]:focus{
+    color: #fff;
+    background-color: #85868d
+}
+
+.forms-table input[type="submit"]{
+    margin: 0;
+    padding: 13px;
+    width: 180px;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    background-color: #12d661;
+}
+
+.forms-table input[type="submit"]{
+    filter: drop-shadow(0px 2px 2.5px rgba(8,118,52,0.35));
+    background-color: #07be51;
 }
