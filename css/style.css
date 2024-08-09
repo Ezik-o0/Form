@@ -624,24 +624,24 @@ label[for="agree"]::before{
     border-radius: 3px;
 }
 
-label[for="remember-password"]::after,
-label[for="contract"]::after,
-label[for="consonant"]::after,
-label[for="news"]::after,
-label[for="novelty"]::after,
-label[for="goods"]::after,
-label[for="sale"]::after,
-label[for="agree"]::after{
+input:checked+label[for="remember-password"]::after,
+input:checked+label[for="contract"]::after,
+input:checked+label[for="consonant"]::after,
+input:checked+label[for="news"]::after,
+input:checked+label[for="novelty"]::after,
+input:checked+label[for="goods"]::after,
+input:checked+label[for="sale"]::after,
+input:checked+label[for="agree"]::after{
     content: '';
     position: absolute;
-    top: 3px;
+    top: 4px;
     left: -20.5px;
-    width: 8px;
-    height: 5px;
+    width: 6px;
+    height: 3px;
     border-left: 2px solid #244dd7;
     border-bottom: 2px solid #244dd7;
     transform: rotate(-45deg);
-    opacity: none;
+    opacity: 0;
 }
 
 input:checked+label[for="remember-password"]::after,
@@ -652,7 +652,7 @@ input:checked+label[for="novelty"]::after,
 input:checked+label[for="goods"]::after,
 input:checked+label[for="sale"]::after,
 input:checked+label[for="agree"]::after{
-    opacity: 0;
+    opacity: 1;
 }
 
 label[for="nova-poshta"],
@@ -678,11 +678,11 @@ label[for="build-woman"]::before{
     border: 1px solid #ccc;
 }
 
-label[for="nova-poshta"]::after,
-label[for="courier"]::after,
-label[for="pickup"];::after,
-label[for="build-man"]::after,
-label[for="build-woman"]::after{
+input:checked+label[for="nova-poshta"]::after,
+input:checked+label[for="courier"]::after,
+input:checked+label[for="pickup"];::after,
+input:checked+label[for="build-man"]::after,
+input:checked+label[for="build-woman"]::after{
     content: "";
     position: absolute;
     top: 4px;
@@ -692,6 +692,7 @@ label[for="build-woman"]::after{
     border: none;
     border-radius: 4px;
     background-color: #244dd7;
+    opacity: 0;
 }
 
 input:checked+label[for="nova-poshta"]::after,
@@ -699,7 +700,7 @@ input:checked+label[for="courier"]::after,
 input:checked+label[for="pickup"]::after,
 input:checked+label[for="build-man"]::after,
 input:checked+label[for="build-woman"]::after{
-    opacity: 0;
+    opacity: 1;
 }
 
 .fixed{
