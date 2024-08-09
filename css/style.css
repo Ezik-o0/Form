@@ -17,7 +17,6 @@ body {
 .wrapper{
     margin: auto;
     width: 80%;
-    max-width: 1200px
 }
 
 .wrapper-title{
@@ -76,7 +75,7 @@ hr{
 .simple-form textarea{
     resize: horizontal;
     padding-top: 15px;
-    width: 329px;
+    max-width: 329px;
     height: 130px;
 }
 
@@ -107,18 +106,20 @@ hr{
     background-color: #12d661;
 }
 
-.simple-form input[type="submit"] :focus{
+.simple-form input[type="submit"]:focus{
     filter: drop-shadow(0px 2px 2.5px rgba(8,118,52,0.35));
     background-color: #07be51;
 }
 
 .fixed-form{
     position: fixed;
-    right: 10.5%;
+    right: 10%;
     width: 315px;
+    z-index: 1;
 }
 
 .fixed{
+    padding: 25px;
     border-radius: 5px;
     filter: drop-shadow(0px 5px 6px rgba(0,0,0,0.15));
     background-color: #fafafa;
@@ -127,17 +128,21 @@ hr{
 
 .fixed p,
 .fixed a{
-    margin: 20px;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.help p{
+    padding: 15px 0 0;
 }
 
 .fixed-infa p{
     position: relative;
-    margin-top: 40px;
 }
 
 .fixed input{
-    width: 260px;
-    padding: 11px 0;
+    width: 230px;
+    padding: 11px 15px;
     border-radius: 3px;
     border: none;
     border: 1px solid #ccc;
@@ -145,8 +150,8 @@ hr{
 
 .fixed input:focus{
     outline: none;
-    border-radius: 3px;
     filter: drop-shadow(0 0 2.5px rgba(62,106,255,0.55));
+    border-radius: 3px;
     border: none;
     border: 1px solid #3e6aff;
 }
@@ -154,7 +159,7 @@ hr{
 .fixed label[for="fixed-login"],
 .fixed label[for="fixed-password"]{
     position: absolute;
-    top: -25px;
+    top: -5px;
     left: 0;
     color: #b3b3b3;
     font-size: 13rem;
@@ -172,11 +177,9 @@ hr{
 
 .fixed input[type="checkbox"]{
     margin: 0;
-    margin-right: 9px;
+    margin-right: 7px;
     width: 16px;
     padding: 11px 0;
-    border: none;
-    border: 1px solid #ccc;
 }
 
 .fixed label[for="remember-password"]{
@@ -185,6 +188,7 @@ hr{
 }
 
 .fixed input[type="submit"]{
+    width: 260px;
     color: #fff;
     border: none;
     border-radius: 3px;
@@ -282,7 +286,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     left: 0;
     position: absolute;
     background-image: url(../img/gender_sprite.png);
-    width: 71px;
+    width: 72px;
     height: 71px;
 }
 
@@ -292,7 +296,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     left: 0;
     position: absolute;
     background-image: url(../img/gender_sprite.png);
-    width: 71px;
+    width: 72px;
     height: 71px;
     background-position: 72px 0;
 }
@@ -303,8 +307,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .stylized__radio input:checked+label[for="woman"]::before{
-    top: -1px;
-    background-position: 72px 71px;
+    top: 1px;
+    background-position: 71px 71px;
 }
 
 .stylized__radio input[type="radio"]{
@@ -427,7 +431,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .table p{
-    margin-bottom: 20px;
+    margin: 0;
 }
 
 .table label{
@@ -443,6 +447,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     padding: 16px 0;
 }
 
+.photo{
+    padding: 20px 0;
+}
+
 .form-table label[for="photoo"]{
     padding: 14px 40px;
     color: #fff;
@@ -451,9 +459,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background-color: #3e6aff;
 }
 
+.comment{
+    padding: 15px 0;
+    vertical-align: top;
+}
+
 .form-table textarea{
-    resize: horizontal vertical;
-    width: 340px;
+    resize: horizontal;
+    max-width: 340px;
     height: 130px;
     border: none;
     border-radius: 3px;
@@ -489,7 +502,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .forms-table input,
 .forms-table select{
-    margin: 30px 9px 40px 0;
+    margin: 30px 9px 30px 0;
     padding: 12px 15px;
     width: 220px;
     box-sizing: border-box;
@@ -503,7 +516,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .forms-table input[type="text__city"],
 .forms-table input[type="text__house"],
 .forms-table input[type="text__index"]{
-    margin: 30px 9px 10px 0;
+    margin: 30px 9px 5px 0;
 }
 
 .forms-table select{
@@ -511,7 +524,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .forms-table input[type="email__adres"]{
-    width: 98%;
+    width: 100%;
 }
 
 .forms-table td{
@@ -554,7 +567,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .button p{
-    margin: 50px 0;
+    margin: 30px 0;
     margin-right: 330px;
 }
 
@@ -583,6 +596,22 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border: none;
     border-radius: 3px;
     background-color: #12d661;
+}
+
+.infa__name:first-child td{
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.forms-table td:last-child input{
+    margin-right: 0;
+}
+
+.checkbox__box{
+    height: 60px;
+}
+
+.checkbox__box:last-child td{
+    border-bottom: 1px solid #e9e9e9;
 }
 
 .forms-table input[type="submit"]{
@@ -618,8 +647,8 @@ label[for="agree"]::before{
     position: absolute;
     top: -1px;
     left: -25px;
-    width: 16px;
-    height: 16px;
+    width: 14.5px;
+    height: 14.5px;
     border: 1px solid #ccc;
     border-radius: 3px;
 }
@@ -672,25 +701,25 @@ label[for="build-woman"]::before{
     position: absolute;
     top: 0;
     left: -25px;
-    width: 15px;
-    height: 15px;
-    border-radius: 9px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
     border: 1px solid #ccc;
 }
 
 input:checked+label[for="nova-poshta"]::after,
 input:checked+label[for="courier"]::after,
-input:checked+label[for="pickup"];::after,
+input:checked+label[for="pickup"]::after,
 input:checked+label[for="build-man"]::after,
 input:checked+label[for="build-woman"]::after{
     content: "";
     position: absolute;
     top: 4px;
-    left: -20.4px;
+    left: -20.9px;
     width: 8px;
     height: 8px;
     border: none;
-    border-radius: 4px;
+    border-radius: 50%;
     background-color: #244dd7;
     opacity: 0;
 }
@@ -703,6 +732,10 @@ input:checked+label[for="build-woman"]::after{
     opacity: 1;
 }
 
+/* input[type="checkbox"]:focus{
+    border: 1px solid #3e6aff;
+} */
+
 .fixed{
     position: relative;
 }
@@ -710,7 +743,7 @@ input:checked+label[for="build-woman"]::after{
 .fixed::before{
     content: "";
     position: absolute;
-    top: 10px;
+    top: 10.3px;
     right: 18px;
     width: 10px;
     height: 10px;
@@ -722,8 +755,8 @@ input:checked+label[for="build-woman"]::after{
 .fixed::after{
     content: "";
     position: absolute;
-    top: 17.8px;
-    right: 18px;
+    top: 18px;
+    right: 17.8px;
     width: 10px;
     height: 10px;
     border: none;
@@ -731,10 +764,60 @@ input:checked+label[for="build-woman"]::after{
     transform: rotate(-135deg);
 }
 
-/* input:checked+label[for="remember-password"]:focus{
-    border: 1px solid #3e6aff;
-} */
+.select__box{
+    position: relative;
+}
 
+label[for="select"]{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
 
+select{
+    appearance: none;
+    top: 0;
+    left: 0;
+    padding: 18px;
+    background: transparent;
+    border-radius: 3px;
+}
 
+label[for="select"]::before{
+    content: '';
+    position: absolute;
+    top: 18px;
+    left: 300px;
+    border: 6px solid transparent;
+    border-top-color: #000;
+}
 
+label[for="select-city"]::before{
+    content: '';
+    position: absolute;
+    top: 23px;
+    left: 415px;
+    border: 6px solid transparent;
+    border-top-color: #000;
+}
+
+label[for="country"]::before{
+    content: '';
+    position: absolute;
+    top: 60px;
+    left: 195px;
+    border: 6px solid transparent;
+    border-top-color: #000;
+}
+
+label[for="country"]::after{
+    content: '';
+    position: absolute;
+    top: 53px;
+    left: 185px;
+    width: 1px;
+    height: 19px;
+    background-color: #ccc;
+}

@@ -24,12 +24,16 @@
                         <input type="email" name="email" id="simple-email" placeholder="Email">
                         <label for="simple-email"></label>
                     </p>
-                    <select name="your-city" id="city">
-                        <option value="City">Ваше місто</option>
-                        <option value="Kyiv">Київ</option>
-                        <option value="Lviv">Львів</option>
-                        <option value="Khmelnitsky">Хмельницький</option>
-                    </select> <br>
+                    <div class="select__box">
+                        <label for="select"></label>
+                        <select name="your-city" id="select">
+                            <option value="City">Ваше місто</option>
+                            <option value="Kyiv">Київ</option>
+                            <option value="Lviv">Львів</option>
+                            <option value="Khmelnitsky">Хмельницький</option>
+                        </select>
+                    </div>
+                    <br>
                     <textarea name="enter-email" id="email" placeholder="Email"></textarea> <br>
                     <p>
                         <input type="submit" value="Зареєструватися">
@@ -50,14 +54,16 @@
                                 <label for="fixed-password">Пароль</label>
                             </p>
                         </div>
-                        <a href="#">Забули пароль?</a>
-                        <p>
-                            <input type="checkbox" name="remember-password" id="remember-password">
-                            <label for="remember-password">Запам’ятати пароль</label>
-                        </p>
-                        <p>
-                            <input type="submit" value="Увійти">
-                        </p>
+                        <div class="help">
+                            <a href="#">Забули пароль?</a>
+                            <p>
+                                <input type="checkbox" name="remember-password" id="remember-password">
+                                <label for="remember-password">Запам’ятати пароль</label>
+                            </p>
+                            <p>
+                                <input type="submit" value="Увійти">
+                            </p>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -176,8 +182,9 @@
                             <td>
                                 <label for="misto">Місто:</label>
                             </td>
-                            <td>
-                                <select name="misto" id="misto">
+                            <td class="select__box">
+                                <label for="select-city"></label>
+                                <select name="misto" id="select-city">
                                     <option value="Khmelnitsky">Хмельницький</option>
                                     <option value="Odessa">Одеса</option>
                                     <option value="Lviv">Львів</option>
@@ -204,13 +211,13 @@
                             <td>
                                 <label for="photo">Фото:</label>
                             </td>
-                            <td>
+                            <td class="photo">
                                 <input type="file" name="photo" id="photo" id="photoo">
-                                <label for="photoo">Виберіть файл</label>
+                                <label for="photoo" for="photo">Виберіть файл</label>
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td class="comment">
                                 <label for="comment">Коментарій:</label>
                             </td>
                             <td>
@@ -250,7 +257,7 @@
                             </td>
                         </tr>
                         <tr class="infa">
-                            <td>
+                            <td class="select__box">
                                 <label for="country">Країна</label>
                                 <select name="country" id="country">
                                     <option value="Indonesia">Індонезія</option>
