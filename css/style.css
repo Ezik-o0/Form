@@ -16,7 +16,7 @@ body {
 
 .wrapper{
     margin: auto;
-    width: 82%;
+    width: 80%;
     max-width: 1200px
 }
 
@@ -74,12 +74,14 @@ hr{
 }
 
 .simple-form textarea{
+    resize: horizontal;
     padding-top: 15px;
     width: 329px;
     height: 130px;
 }
 
 .simple-form select{
+    appearance: none;
     margin-bottom: 9px;
     padding: 11px 15px;
     width: 330px;
@@ -101,6 +103,7 @@ hr{
     width: 335px;
     color: #fff;
     font-size: 14rem;
+    border: none;
     background-color: #12d661;
 }
 
@@ -111,7 +114,7 @@ hr{
 
 .fixed-form{
     position: fixed;
-    left: 69%;
+    right: 10.5%;
     width: 315px;
 }
 
@@ -168,7 +171,8 @@ hr{
 }
 
 .fixed input[type="checkbox"]{
-    margin: 0 9px;
+    margin: 0;
+    margin-right: 9px;
     width: 16px;
     padding: 11px 0;
     border: none;
@@ -182,6 +186,7 @@ hr{
 
 .fixed input[type="submit"]{
     color: #fff;
+    border: none;
     border-radius: 3px;
     background-color: #12d661;
 }
@@ -233,6 +238,7 @@ hr{
 }
 
 .elements-box input[type="date"]{
+    width: 140px;
     margin-left: 15px;
     padding: 10px;
     border-radius: 3px;
@@ -240,6 +246,23 @@ hr{
     border: 1px solid #ccc;
 }
 
+.elements-box input[type="date"]{
+    background-image: url(../img/data.png);
+    background-repeat: no-repeat;
+    background-position: 125px 9px;
+}
+
+.elements-box input[type="date"]:focus{
+    outline: none;
+    border: none;
+    border: 1px solid #ccc;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
 .stylized__radio p{
     margin: 10px 0;
 }
@@ -374,6 +397,7 @@ hr{
 }
 
 .form-table select{
+    appearance: none;
     padding-left: 17px;
     width: 340px;
 }
@@ -428,7 +452,7 @@ hr{
 }
 
 .form-table textarea{
-    margin-top: 25px;
+    resize: horizontal vertical;
     width: 340px;
     height: 130px;
     border: none;
@@ -463,19 +487,6 @@ hr{
     font-size: 18rem;
 }
 
-.infa__name{
-    position: relative;
-}
-
-.infa__name::after{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 100px;
-    width: 680px;
-    border: 1px solid #e9e9e9;
-}
-
 .forms-table input,
 .forms-table select{
     margin: 30px 9px 40px 0;
@@ -495,6 +506,10 @@ hr{
     margin: 30px 9px 10px 0;
 }
 
+.forms-table select{
+    appearance: none;
+}
+
 .forms-table input[type="email__adres"]{
     width: 98%;
 }
@@ -507,7 +522,7 @@ hr{
 .infa__name label{
     padding: 18px 0;
     position: absolute;
-    top: -18px;
+    top: -10px;
     left: 0;
 }
 
@@ -525,22 +540,8 @@ hr{
 }
 
 .forms-table input[type="checkbox"]{
-    margin: 0 9px;
-    width: 16px;
-    height: 16px;
-}
-
-.checkbox__box{
-    position: relative;
-}
-
-.checkbox__box::after{
-    content: '';
-    left: 0;
-    top: 40px;
-    position: absolute;
-    width: 680px;
-    border: 1px solid #e9e9e9;
+    margin: 0 9px 0 0;
+    width: 13px;
 }
 
 .forms-table label[for="agree"]{
@@ -588,3 +589,151 @@ hr{
     filter: drop-shadow(0px 2px 2.5px rgba(8,118,52,0.35));
     background-color: #07be51;
 }
+
+input[type="checkbox"],
+input[type="radio"]{
+    visibility: hidden;
+}
+
+label[for="remember-password"],
+label[for="contract"],
+label[for="consonant"],
+label[for="news"],
+label[for="novelty"],
+label[for="goods"],
+label[for="sale"],
+label[for="agree"]{
+    position: relative;
+}
+
+label[for="remember-password"]::before,
+label[for="contract"]::before,
+label[for="consonant"]::before,
+label[for="news"]::before,
+label[for="novelty"]::before,
+label[for="goods"]::before,
+label[for="sale"]::before,
+label[for="agree"]::before{
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -25px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+label[for="remember-password"]::after,
+label[for="contract"]::after,
+label[for="consonant"]::after,
+label[for="news"]::after,
+label[for="novelty"]::after,
+label[for="goods"]::after,
+label[for="sale"]::after,
+label[for="agree"]::after{
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: -20.5px;
+    width: 8px;
+    height: 5px;
+    border-left: 2px solid #244dd7;
+    border-bottom: 2px solid #244dd7;
+    transform: rotate(-45deg);
+    opacity: none;
+}
+
+input:checked+label[for="remember-password"]::after,
+input:checked+label[for="contract"]::after,
+input:checked+label[for="consonant"]::after,
+input:checked+label[for="news"]::after,
+input:checked+label[for="novelty"]::after,
+input:checked+label[for="goods"]::after,
+input:checked+label[for="sale"]::after,
+input:checked+label[for="agree"]::after{
+    opacity: 0;
+}
+
+label[for="nova-poshta"],
+label[for="courier"],
+label[for="pickup"],
+label[for="build-man"],
+label[for="build-woman"]{
+    position: relative;
+}
+
+label[for="nova-poshta"]::before,
+label[for="courier"]::before,
+label[for="pickup"]::before,
+label[for="build-man"]::before,
+label[for="build-woman"]::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -25px;
+    width: 15px;
+    height: 15px;
+    border-radius: 9px;
+    border: 1px solid #ccc;
+}
+
+label[for="nova-poshta"]::after,
+label[for="courier"]::after,
+label[for="pickup"];::after,
+label[for="build-man"]::after,
+label[for="build-woman"]::after{
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: -20.4px;
+    width: 8px;
+    height: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #244dd7;
+}
+
+input:checked+label[for="nova-poshta"]::after,
+input:checked+label[for="courier"]::after,
+input:checked+label[for="pickup"]::after,
+input:checked+label[for="build-man"]::after,
+input:checked+label[for="build-woman"]::after{
+    opacity: 0;
+}
+
+.fixed{
+    position: relative;
+}
+
+.fixed::before{
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 18px;
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-bottom: 2px solid #b3b3b3;
+    transform: rotate(-45deg);
+}
+
+.fixed::after{
+    content: "";
+    position: absolute;
+    top: 17.8px;
+    right: 18px;
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-bottom: 2px solid #b3b3b3;
+    transform: rotate(-135deg);
+}
+
+/* input:checked+label[for="remember-password"]:focus{
+    border: 1px solid #3e6aff;
+} */
+
+
+
+
