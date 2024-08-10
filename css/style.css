@@ -243,7 +243,7 @@ hr{
 
 .elements-box input[type="date"]{
     width: 140px;
-    margin-left: 15px;
+    margin-left: 10px;
     padding: 10px;
     border-radius: 3px;
     border: none;
@@ -307,8 +307,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .stylized__radio input:checked+label[for="woman"]::before{
-    top: 1px;
-    background-position: 71px 71px;
+    top: -1px;
+    background-position: 72px 71px;
 }
 
 .stylized__radio input[type="radio"]{
@@ -664,7 +664,7 @@ input:checked+label[for="agree"]::after{
     content: '';
     position: absolute;
     top: 4px;
-    left: -20.5px;
+    left: -20.4px;
     width: 6px;
     height: 3px;
     border-left: 2px solid #244dd7;
