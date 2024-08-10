@@ -653,6 +653,11 @@ label[for="agree"]::before{
     border-radius: 3px;
 }
 
+input[type="checkbox"]:checked+::before,
+input[type="radio"]:checked+::before{
+    border: 1px solid #3e6aff;
+}
+
 input:checked+label[for="remember-password"]::after,
 input:checked+label[for="contract"]::after,
 input:checked+label[for="consonant"]::after,
@@ -664,7 +669,7 @@ input:checked+label[for="agree"]::after{
     content: '';
     position: absolute;
     top: 4px;
-    left: -20.4px;
+    left: -20.5px;
     width: 6px;
     height: 3px;
     border-left: 2px solid #244dd7;
@@ -732,9 +737,9 @@ input:checked+label[for="build-woman"]::after{
     opacity: 1;
 }
 
-/* input[type="checkbox"]:focus{
+input[type="checkbox"]:checked::before{
     border: 1px solid #3e6aff;
-} */
+}
 
 .fixed{
     position: relative;
