@@ -59,7 +59,7 @@ hr{
 .simple-form textarea{
     width: 330px;
     box-sizing: border-box;
-    padding: 12px 15px;
+    padding: 13px 15px;
     background-color: #fff;
     border: none;
     border-radius: 3px;
@@ -81,8 +81,7 @@ hr{
 
 .simple-form select{
     appearance: none;
-    margin-bottom: 9px;
-    padding: 11px 15px;
+    padding: 13px 15px;
     width: 330px;
 }
 
@@ -106,7 +105,7 @@ hr{
     background-color: #12d661;
 }
 
-.simple-form input[type="submit"]:focus{
+.simple-form input[type="submit"]:hover{
     filter: drop-shadow(0px 2px 2.5px rgba(8,118,52,0.35));
     background-color: #07be51;
 }
@@ -121,7 +120,7 @@ hr{
 .fixed{
     padding: 25px;
     border-radius: 5px;
-    filter: drop-shadow(0px 5px 6px rgba(0,0,0,0.15));
+    filterg: drop-shadow(0px 5px 6px rgba(0,0,0,0.15));
     background-color: #fafafa;
     border: 1px solid #e6e6e6;
 }
@@ -142,7 +141,7 @@ hr{
 
 .fixed input{
     width: 230px;
-    padding: 11px 15px;
+    padding: 13px 15px;
     border-radius: 3px;
     border: none;
     border: 1px solid #ccc;
@@ -195,8 +194,8 @@ hr{
     background-color: #12d661;
 }
 
-.fixed input[type="submit"]:focus{
-    filter: drop-shadow(0px 2px 2.5px rgba(8,118,52,0.35));
+.fixed input[type="submit"]:hover{
+    box-shadow: inset (0px 2px 2.5px rgba(8,118,52,0.35));
     background-color: #07be51;
 }
 
@@ -244,7 +243,7 @@ hr{
 .elements-box input[type="date"]{
     width: 140px;
     margin-left: 10px;
-    padding: 10px;
+    padding: 12px;
     border-radius: 3px;
     border: none;
     border: 1px solid #ccc;
@@ -267,6 +266,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     display: none;
     -webkit-appearance: none;
 }
+
 .stylized__radio p{
     margin: 10px 0;
 }
@@ -387,7 +387,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin: 4px 0;
     width: 340px;
     box-sizing: border-box;
-    padding: 12px 15px;
+    padding: 13px 15px;
     border-radius: 3px;
     border: none;
     border: 1px solid #ccc;
@@ -430,6 +430,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin: 5px 100px;
 }
 
+table{
+    border-collapse: collapse;
+}
+
 .table p{
     margin: 0;
 }
@@ -457,6 +461,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border: none;
     border-radius: 3px;
     background-color: #3e6aff;
+}
+
+.form-table label[for="photoo"]:hover{
+    filter: drop-shadow(0px 2px 2.5px rgba(15,40,126,0.35));
+    background-color: #2857f4;
 }
 
 .comment{
@@ -490,7 +499,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border: 1px solid #3e6aff;
 }
 
-.form-table input[type="submit"]:focus{
+.form-table input[type="submit"]:hover{
     filter: drop-shadow(0px 2px 2.5px rgba(8,118,52,0.35));
     background-color: #07be51
 }
@@ -503,12 +512,26 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .forms-table input,
 .forms-table select{
     margin: 30px 9px 30px 0;
-    padding: 12px 15px;
+    padding: 13px 15px;
     width: 220px;
     box-sizing: border-box;
     border: none;
     border-radius: 3px;
     border: 1px solid #ccc;
+}
+
+.forms-table select[name="country"]{
+    margin: 45px 9px 0 0;
+}
+
+.forms-table input[type="adresa"]{
+    margin: 50px 9px 5px 0;   
+    width: 98%;
+}
+
+.forms-table label[for="country"],
+.forms-table label[for="adres"]{
+    padding: 40px 0 18px;
 }
 
 .forms-table select,
@@ -521,10 +544,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .forms-table select{
     appearance: none;
-}
-
-.forms-table input[type="email__adres"]{
-    width: 100%;
 }
 
 .forms-table td{
@@ -583,7 +602,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border: 1px solid #85868d;
 }
 
-.forms-table input[type="button"]:focus{
+.forms-table input[type="button"]:hover{
     color: #fff;
     background-color: #85868d
 }
@@ -602,10 +621,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border-bottom: 1px solid #e9e9e9;
 }
 
-.forms-table td:last-child input{
-    margin-right: 0;
-}
-
 .checkbox__box{
     height: 60px;
 }
@@ -614,7 +629,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border-bottom: 1px solid #e9e9e9;
 }
 
-.forms-table input[type="submit"]{
+.forms-table input[type="submit"]:hover{
     filter: drop-shadow(0px 2px 2.5px rgba(8,118,52,0.35));
     background-color: #07be51;
 }
